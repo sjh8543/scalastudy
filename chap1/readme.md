@@ -51,7 +51,6 @@ scala> pow(res3, 2)
 res4: Double = 2.9999999999999996
 
 ```
-
 3. 
 ```scala
 scala> res4 = 1
@@ -60,21 +59,18 @@ scala> res4 = 1
             ^
 그러므로 val
 ```
-
 4. 
 ```scala
 scala> "crazy" * 3
 res13: String = crazycrazycrazy
 ```
 [http://www.scala-lang.org/api/current/#scala.collection.immutable.StringOps](http://www.scala-lang.org/api/current/#scala.collection.immutable.StringOps)
-
 5. 
 ```scala
 scala> 10 max 2
 res5: Int = 10
 ```
 [http://www.scala-lang.org/api/2.11.6/#scala.runtime.ScalaNumberProxy](http://www.scala-lang.org/api/2.11.6/#scala.runtime.ScalaNumberProxy)
-
 6.
 ```scala
 scala> BigInt(1)
@@ -83,7 +79,6 @@ res2: scala.math.BigInt = 1
 scala> res2 << 1024
 res3: scala.math.BigInt = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 ```
-
 7. 
 ```scala
 scala> import scala.math.BigInt.probablePrime
@@ -95,7 +90,6 @@ import scala.util.Random
 scala> probablePrime(100, Random)
 res2: scala.math.BigInt = 858252260090249617125837094573
 ```
-
 8. 
 ```scala
 scala> scala.BigInt(100, scala.util.Random)
@@ -104,7 +98,6 @@ res13: scala.math.BigInt = 666264801719968691733421135554
 scala> res13.toString(36)
 res14: String = 1slfothtfzyf3r1a7c1u
 ```
-
 9. 
 ```scala
 scala> "Hello Scala!!"
@@ -116,6 +109,51 @@ res21: Char = H
 scala> res20.last
 res22: Char = !
 ```
+10.
+```scala
+scala> "Hello Scala World~~!!!"
+res37: String = Hello Scala World~~!!!
+
+scala> res37.substring(0,7)
+res38: String = Hello S
+
+#~7번째 문자열 return
+scala> res37.take(7)
+res39: String = Hello S
+
+#~7번째 까지의 문자열 버린 나머지 return
+scala> res37.drop(7)
+res40: String = cala World~~!!!
+
+#오른쪽(문자열 끝)에서부터 ~7번째까지의 문자열 return
+scala> res37.takeRight(7)
+res41: String = ld~~!!!
+
+#오른쪽(문자열 끝)에서부터 ~7번째까지의 문자열 버린 나머지 return
+scala> res37.dropRight(7)
+res42: String = Hello Scala Wor
+```
+take, drop 의 장점
+1. index bound check의 책임이 없다.
+2. String의 끝을 계산할 필요가 없다.
+
+take, drop 의 단점
+1. 글쎄? 굳이 꼽자면 ~~Right 따위 명명법은 scala 에만 존재하므로 사용자 접근에 방해될 수 있다.
+```scala
+#index bound check 의 책임이 사용자에게 있다.
+scala> res37.substring(100)
+java.lang.StringIndexOutOfBoundsException: String index out of range: -78
+  at java.lang.String.substring(String.java:1918)
+  ... 35 elided
+
+#index bound를 넘어가도 정상 return
+scala> res37.drop(100)
+res44: String = ""
+
+scala> res37.take(100)
+res45: String = Hello Scala World~~!!!
+```
+
 
 ## 퀴즈
 [퀴즈풀이1](https://github.com/bahamoth/scalastudy/tree/master/chap1/quiz1.scala)
