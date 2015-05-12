@@ -67,7 +67,7 @@ res13: String = crazycrazycrazy
 ```
 [http://www.scala-lang.org/api/current/#scala.collection.immutable.StringOps](http://www.scala-lang.org/api/current/#scala.collection.immutable.StringOps)
 
-5. 
+5.
 ```scala
 scala> 10 max 2
 res5: Int = 10
@@ -83,7 +83,7 @@ scala> res2 << 1024
 res3: scala.math.BigInt = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 ```
 
-7. 
+7.
 ```scala
 scala> import scala.math.BigInt.probablePrime
 import scala.math.BigInt.probablePrime
@@ -95,7 +95,7 @@ scala> probablePrime(100, Random)
 res2: scala.math.BigInt = 858252260090249617125837094573
 ```
 
-8. 
+8.
 ```scala
 scala> scala.BigInt(100, scala.util.Random)
 res13: scala.math.BigInt = 666264801719968691733421135554
@@ -104,7 +104,7 @@ scala> res13.toString(36)
 res14: String = 1slfothtfzyf3r1a7c1u
 ```
 
-9. 
+9.
 ```scala
 scala> "Hello Scala!!"
 res20: String = Hello Scala!!
