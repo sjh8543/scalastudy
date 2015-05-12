@@ -33,6 +33,7 @@ scala 는 operator overloading 할 수 있다.
 1장은 쉬우니까 알아서
 
 ## 퀴즈
+[퀴즈풀이1](https://github.com/bahamoth/scalastudy/tree/master/chap1/quiz1.scala)
 
 > 10보다 작은 자연수 중에서 3 또는 5의 배수는 3, 5, 6, 9 이고, 이것을 모두 더하면 23입니다.
 > 1000보다 작은 자연수 중에서 3 또는 5의 배수를 모두 더하면 얼마일까요?
