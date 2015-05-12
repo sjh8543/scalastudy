@@ -141,11 +141,11 @@ scala> res37.dropRight(7)
 res42: String = Hello Scala Wor
 ```
 take, drop 의 장점
-1. index bound check의 책임이 없다.
-2. String의 끝을 계산할 필요가 없다.
+	1. index bound check의 책임이 없다.
+	2. String의 끝을 계산할 필요가 없다.
 
 take, drop 의 단점
-1. 글쎄? 굳이 꼽자면 ~~Right 따위 명명법은 scala 에만 존재하므로 사용자 접근에 방해될 수 있다.
+	1. 글쎄? 굳이 꼽자면 ~~Right 따위 명명법은 scala 에만 존재하므로 사용자 접근에 방해될 수 있다.
 ```scala
 #index bound check 의 책임이 사용자에게 있다.
 scala> res37.substring(100)
