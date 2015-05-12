@@ -22,10 +22,10 @@ scala 에는 primitive type 이 없다.
 
 scala 는 operator를 다음과 같이 쓸 수도 있다.
 - binary operator
--- 1.+(2)
--- 1 + 2
+..* 1.+(2)
+..* 1 + 2
 - parameter 없는 operator 는 괄호 생략
--- 1.tostring
+..* 1.tostring
 
 scala 는 operator overloading 할 수 있다.
 
