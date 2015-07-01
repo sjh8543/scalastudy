@@ -43,3 +43,12 @@
 * 비트 집합은 음수가 아닌 정수의 집합을 일련의 비트로 구현 ( 왜 양의 정수 ? ) 
 * i 가 집합에 있으면 i 번째 비트가 1 -> 따라서 최대원소가 크지 않은 선에서 효율적인 구현 
 * union , intersect , diff는 합집합 , 교집합 , 차집합 연산을 수행하는 메소드 
+
+
+###9. 합수매핑
+* map 메소드는 함수를 map method caller 콜렉션의 모든 원소에 적용하고 결과 컬렉션을 반환한다 
+```scala
+val names = List("Peter" , "Mary" , "Paul" )
+names.map(_toUpperCase) //List("PETER","MARY","PAUL")
+```
+
